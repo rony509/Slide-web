@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Web Slide Shows</title>
+        <meta charset="utf-8">
+        <style type="text/css">
+
+       body {
+         margin: 0;
+
+       }
+       #nav-h {
+         list-style-type: none;
+         overflow: hidden;
+         background-color: #ddd;
+         padding: 0;
+         margin: 0;
+       }
+       #nav-h li {
+         float: left;
+       }
+       #nav-h li a {
+         display: block;
+         text-align: center;
+         text-decoration: none;
+         padding: 14px 18px;
+         color: white;
+         font-size: 20px;
+         font-family: tahoma;
+       }
+       #nav-h li:first-child {
+         list-style-type: none;
+         text-decoration: none;
+         background-color: #4caf50;
+         color: #fff;
+         padding: 14px 18px;
+         font-family: 'monotype corsiva';
+         font-size: 20px
+       }
+       #nav-h li a:hover {
+         background-color: #000;
+       }
+
+       div#slideshow {
+         width:100%;
+         height: 500px;
+         background-color: black;
+         margin-top: 10px;
+
+       }
+       img.slide {
+         display: none;
+       }
+       img.slide:nth-child(6) {
+         display: block;
+
+       }
+  .animateopacity {
+-webkit – animation- name: opacityAnimation;
+-moz – animation- name: opacityAnimation;
+-o– animation- name: opacityAnimation;
+-ms – animation- name: opacityAnimation;
+ animation- name: opacityAnimation;
+
+-webkit – animation- duration: 2s;
+-moz – animation- duration: 2s;
+-o – animation- duration: 2s;
+-ms – animation- duration: 2s;
+ animation- duration: 2s;
+}
+@-webit-keyframes opacityAnimaton {
+From { opacity:0.1; }
+To { opacity: 1; }
+}
+@-moz-keyframes opacityAnimaton {
+From { opacity:0.1; }
+To { opacity: 1; }
+}
+@-o-keyframes opacityAnimaton {
+From { opacity:0.1; }
+To { opacity: 1; }
+}
+@-ms-keyframes opacityAnimaton {
+From { opacity:0.1; }
+To { opacity: 1; }
+}
+@-keyframes opacityAnimaton {
+From { opacity:0.1; }
+To { opacity: 1; }
+}
+
+
+        </style>
+    </head>
+    <body>
+      <ul id="nav-h">
+        <li>Best Cars Dealer</li>
+       <li><a href="#">Home Page</a></li>
+       <li><a href="#">Contact Us</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Service</a></li>
+      </ul>
+
+      <div id="slideshow">
+   <img class="slide animateopacity"src="automobile-car-convertible-326259.jpg"width="100%"height="500px">
+    <img class="slide animateopacity"src="shutterstock_518400892.0.jpg"width="100%"height="500px">
+    <img class="slide animateopacity"src="maxresdefault (1).jpg"width="100%"height="500px">
+    <img class="slide animateopacity"src="bugatti-vision.jpg"width="100%"height="500px">
+    <img class="slide animateopacity"src="maxresdefault.jpg"width="100%"height="500px">
+    <img class="slide animateopacity"src="_2018_porsche_ag-9.jpg"width="100%"height="500px" title="Porsche">
+    <img class="slide animateopacity"src="2020-Porsche-Cayenne.jpg"width="100%"height="500px">
+
+      </div>
+      <script type="text/javascript">
+var slides = document.getElementsByClassName("slide");
+var slide=0;
+
+setInterval(changeSlide,2000);
+function changeSlide()
+{
+ for(var i=0; i<slides.length; i++)
+ {
+  slides[i].style.display="none";
+ }
+ slide++;
+ if(slide > slides.length-1)
+ {
+  slide=0;
+ }
+ slides[slide].style.display="block";
+
+}
+      </script>
+
+    </body>
+</html>
